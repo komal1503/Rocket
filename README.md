@@ -2,6 +2,9 @@
 
 ## Our Project Link: https://komal1503.github.io/Rocket/
 
+
+![alt text](https://github.com/komal1503/Rocket/blob/main/project.png)
+
 ## What is NFT:
 
 NFTs are "one-of-a-kind" assets in the digital world that can be bought and sold like any other piece of property, but which have no tangible form of their own. The digital tokens can be thought of as certificates of ownership for virtual or physical assets.
