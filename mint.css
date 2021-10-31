@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(250, 213, 51);
+}
+
+.main{
+      margin-left: 40%;
+      margin-top: 10%;
+}
+
+.mint{
+    margin-left: 1rem;
+    
+}
+
+.wallet{
+    font-size: 15rem;
+}
+
+button#mint{
+    background-color: rgb(255, 8, 0);
+}
+
+h2{
+    background-color: rgb(255, 8, 0);
+    font-size: 2rem;
+}

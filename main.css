@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(250, 213, 51);
+}
+
+
+.head{
+    display: flex;
+    font-size: 5rem;
+    font-style: oblique;
+    margin-left: 40%;
+    color: red;
+}
+
+.content1{
+    margin-left: 10%;  
+}
+
+.wallet{
+    margin-left: 20rem;
+    
+}
+
+.btn1{
+    background-color: rgb(0, 140, 255);
+    border-radius: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.btn2{
+    background-color: rgb(140, 0, 255);
+    border-radius: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-left: 7rem;
+    margin-top: 3rem;
+    color: white;
+}
+
+a{
+    background-color: rgb(140, 0, 255);
+    color: white;
+}
+
+.main{
+    width: 50%;
+    
+    align-items: right;
+}
+
+.rocket{
+    width: 20rem;
+    margin-left: 12rem;
+}
+
+.rock{
+    width: 40%;
+    align-items: left;
+}
+
+.sec{
+    display: flex;
+}
+
