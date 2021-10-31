@@ -1,5 +1,13 @@
 # Pass The NFT
 
+## Our Project Link: https://komal1503.github.io/Rocket/
+
+## What is NFT:
+
+NFTs are "one-of-a-kind" assets in the digital world that can be bought and sold like any other piece of property, but which have no tangible form of their own. The digital tokens can be thought of as certificates of ownership for virtual or physical assets.
+
+If you use social media, basically at all, you would have definitely noted the rising interest in NFTs, or 'non-fungible tokens', as a vehicle for buying and selling digital artworks.
+
 ## Description
 Pass The NFT is a NFT game built on Polygon Blockchain.
 
