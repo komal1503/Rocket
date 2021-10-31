@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <title>Web3 test</title>
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <link rel="stylesheet" href="mint.css">
+    <link rel="stylesheet" href="mint.css" />
   </head>
   <body>
     <div class="main">
-      <div class="head"><h1>Wallet address - <span id="wallet-address"></span></h1></div>
-      <div class="mint"><button id="mint"><h2>Mint an NFT</h2></button></div>
+      <div class="head">
+        <h1>Wallet address - <span id="wallet-address"></span></h1>
+      </div>
+      <div class="mint">
+        <button id="mint"><h2>Mint an NFT</h2></button>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -130,6 +134,15 @@
         },
         {
           inputs: [
+            { internalType: "string", name: "_imageURI", type: "string" },
+          ],
+          name: "formatTokenURI",
+          outputs: [{ internalType: "string", name: "", type: "string" }],
+          stateMutability: "pure",
+          type: "function",
+        },
+        {
+          inputs: [
             { internalType: "uint256", name: "tokenId", type: "uint256" },
           ],
           name: "getApproved",
@@ -139,20 +152,20 @@
         },
         {
           inputs: [
-            { internalType: "uint256", name: "tokenId", type: "uint256" },
+            { internalType: "uint256", name: "_tokenId", type: "uint256" },
           ],
-          name: "getTreeLevel",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          name: "getTokenIdMinter",
+          outputs: [{ internalType: "address", name: "", type: "address" }],
           stateMutability: "view",
           type: "function",
         },
         {
           inputs: [
-            { internalType: "address", name: "friend", type: "address" },
+            { internalType: "uint256", name: "_tokenId", type: "uint256" },
           ],
-          name: "gift",
-          outputs: [],
-          stateMutability: "payable",
+          name: "getTokenIdTransfers",
+          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          stateMutability: "view",
           type: "function",
         },
         {
@@ -166,20 +179,33 @@
           type: "function",
         },
         {
-          inputs: [
-            { internalType: "uint256", name: "tokenId", type: "uint256" },
-            { internalType: "uint256", name: "level", type: "uint256" },
-          ],
-          name: "levelXml",
-          outputs: [{ internalType: "string", name: "", type: "string" }],
+          inputs: [],
+          name: "maxPlayers",
+          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
           stateMutability: "view",
           type: "function",
         },
         {
           inputs: [],
-          name: "maxViewLevel",
+          name: "maxTokens",
           outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
           stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "uint256", name: "_maxTokens", type: "uint256" },
+          ],
+          name: "maxiTokens",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "mintNFT",
+          outputs: [],
+          stateMutability: "payable",
           type: "function",
         },
         {
@@ -203,13 +229,6 @@
           name: "ownerOf",
           outputs: [{ internalType: "address", name: "", type: "address" }],
           stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "plant",
-          outputs: [],
-          stateMutability: "payable",
           type: "function",
         },
         {
@@ -261,15 +280,6 @@
         },
         {
           inputs: [
-            { internalType: "uint256", name: "_maxViewLevel", type: "uint256" },
-          ],
-          name: "setMaxViewLevel",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
             { internalType: "uint256", name: "newPrice", type: "uint256" },
           ],
           name: "setPrice",
@@ -287,6 +297,22 @@
           type: "function",
         },
         {
+          inputs: [
+            { internalType: "uint256", name: "_tokenId", type: "uint256" },
+          ],
+          name: "svg",
+          outputs: [{ internalType: "string", name: "", type: "string" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "string", name: "_svg", type: "string" }],
+          name: "svgToImageURI",
+          outputs: [{ internalType: "string", name: "", type: "string" }],
+          stateMutability: "pure",
+          type: "function",
+        },
+        {
           inputs: [],
           name: "symbol",
           outputs: [{ internalType: "string", name: "", type: "string" }],
@@ -294,18 +320,15 @@
           type: "function",
         },
         {
-          inputs: [{ internalType: "uint256", name: "index", type: "uint256" }],
-          name: "tokenByIndex",
+          inputs: [],
+          name: "tokenCount",
           outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
           stateMutability: "view",
           type: "function",
         },
         {
-          inputs: [
-            { internalType: "address", name: "owner", type: "address" },
-            { internalType: "uint256", name: "index", type: "uint256" },
-          ],
-          name: "tokenOfOwnerByIndex",
+          inputs: [],
+          name: "tokenId",
           outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
           stateMutability: "view",
           type: "function",
@@ -316,13 +339,6 @@
           ],
           name: "tokenURI",
           outputs: [{ internalType: "string", name: "", type: "string" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "totalSupply",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
           stateMutability: "view",
           type: "function",
         },
@@ -339,18 +355,21 @@
         },
         {
           inputs: [
-            { internalType: "address", name: "newOwner", type: "address" },
+            { internalType: "address", name: "friend", type: "address" },
+            { internalType: "uint256", name: "_tokenId", type: "uint256" },
           ],
-          name: "transferOwnership",
+          name: "transferNFT",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
         {
-          inputs: [],
-          name: "treeCount",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
+          inputs: [
+            { internalType: "address", name: "newOwner", type: "address" },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
           type: "function",
         },
         {
@@ -361,7 +380,7 @@
           type: "function",
         },
       ];
-      const ADDRESS = "0x3f415E97d964E135751B13b0d45437bbD9FF4Fbd";
+      const ADDRESS = "0x7900e55D26D641529C73A3EC88e5DBC3e42253cF";
 
       // 1. Connect metamask to out site
       (async () => {
@@ -379,8 +398,8 @@
 
           document.getElementById("mint").onclick = () => {
             contract.methods
-              .safeMint(account)
-              .send({ from: account, value: "" });
+              .mintNFT(account)
+              .send({ from: account, value: "0" });
           };
         }
       })();
